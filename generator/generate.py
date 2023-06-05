@@ -33,7 +33,9 @@ def save_output_as_csv(pd: DataFrame, output_path: str):
 
 
 def save_output_as_json(pd: DataFrame, output_path: str):
-    pd.to_json(f"{output_path}/data.json", orient="records", date_format="iso")
+    pd.to_json(
+        f"{output_path}/data.json", orient="records", date_format="iso", lines=True
+    )
 
 
 def save_output_as_xml(pd: DataFrame, output_path: str):
