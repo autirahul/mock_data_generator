@@ -13,6 +13,8 @@ Follow below steps to run the utility. I am open to your suggestions, please add
 
 - --input_json_schema_path: Provide absolute path of the json schema file/folder. It accepts folders(that contains valid json schema files) or absolute path of a json schema file.
 
+- Supported data types are: `"STRING","INT","INTEGER","NUMBER","FLOAT","DATE","BOOLEAN","BOOL","TIMESTAMP"`
+
 > Json schema file format.
 ```json
 {
@@ -44,12 +46,9 @@ The generator will skip the current json schema file if an error occurred. Mock 
 
 - --output_file_format: The output file format should be one of the `"CSV","JSON","XML","EXCEL","PARQUET","ORC"`
 
-- --output_path: Absolute path where the generated output should be stored
+- --output_path: Absolute path to store the generated mock dataset. If an output path does not exists, it will create it and store the data inside the directory into data file.
 
 - --number_of_rows: Number of output rows to be generated
-
-- Supported data types are: `"STRING","INT","INTEGER","NUMBER","FLOAT","DATE","BOOLEAN","BOOL","TIMESTAMP"`
-
 
 ### Pre-requisites
 1. Python 3.11.3
@@ -58,7 +57,7 @@ The generator will skip the current json schema file if an error occurred. Mock 
 ### Steps to execute the utility
 1. pip install mock-data-generator
 2. specify the parameters mentioned above
-4. Sample command: `generate --input_json_schema_path=resources/schema.json --output_file_format=csv --output_path=output_data --number_of_rows=10 ` : If output path does not exists, it will create it and store the data inside the directory into data.csv file
+4. Sample command: `generate --input_json_schema_path=resources/schema.json --output_file_format=csv --output_path=output_data --number_of_rows=10 ` :
 
 ### Licensing
 Distributed under the MIT license. See ``LICENSE`` for more information.
