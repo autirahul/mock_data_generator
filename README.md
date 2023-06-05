@@ -7,8 +7,10 @@ This utility is using Python Faker module to randomly generate the test data.
 
 ## How to use
 Follow below step to run the utility. I am open to the suggestions, please add comment or mail me your suggestions.
-### Inputs
-- input_json_schema_path: Provide absolute path of the json schema file. The sample json schema file should be
+### Inputs:
+Accepts below inputs as parameters.
+
+- --input_json_schema_path: Provide absolute path of the json schema file. The sample json schema file should look like below.
 ```json
 {
   "type": "object",
@@ -25,11 +27,11 @@ Follow below step to run the utility. I am open to the suggestions, please add c
 }
 ```
 
-- output_file_format: The output file format should be one of the `"CSV","JSON","XML","EXCEL","PARQUET","ORC"`
+- --output_file_format: The output file format should be one of the `"CSV","JSON","XML","EXCEL","PARQUET","ORC"`
 
-- output_path: Absolute path where the generated output should be stored
+- --output_path: Absolute path where the generated output should be stored
 
-- number_of_rows: Number of output rows to be generated
+- --number_of_rows: Number of output rows to be generated
 
 - Supported data types are: `"STRING","INT","INTEGER","NUMBER","FLOAT","DATE","BOOLEAN","BOOL","TIMESTAMP"`
 
