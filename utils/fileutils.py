@@ -33,7 +33,7 @@ def mk_run_call(
         )
 
 
-def process(args: Namespace):
+def proceed(args: Namespace):
     json_schema_path = args.input_json_schema_path
     if os.path.isdir(json_schema_path):
         for each_file in os.listdir(json_schema_path):

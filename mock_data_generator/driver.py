@@ -1,8 +1,6 @@
 import argparse
-import os
-from generator.generate import runner
 from utils.constants import FILE_FORMATS
-from utils.fileutils import process
+from utils.fileutils import proceed
 
 
 def validate_file_format(value):
@@ -46,7 +44,7 @@ def run():
         required=True,
     )
     args = parser.parse_args()
-    process(args=args)
+    proceed(args=args)
 
 
 if __name__ == "__main__":
