@@ -8,12 +8,11 @@ This utility is using Python Faker module to randomly generate the test data.
 ## How to use
 Follow below steps to run the utility. I am open to your suggestions, please add comments or mail me your suggestions.
 
-### Inputs:
+### Inputs
+It accept valid json schema files only with supported data types: `"STRING","INT","INTEGER","NUMBER","FLOAT","DATE","BOOLEAN","BOOL","TIMESTAMP"`
 #### Supported Input Parameters
 
 - --input_json_schema_path: Provide absolute path of the json schema file/folder. It accepts folders(that contains valid json schema files) or absolute path of a json schema file.
-
-- Supported data types are: `"STRING","INT","INTEGER","NUMBER","FLOAT","DATE","BOOLEAN","BOOL","TIMESTAMP"`
 
 > Json schema file format.
 ```json
