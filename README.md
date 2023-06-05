@@ -10,7 +10,19 @@ Follow below step to run the utility. I am open to the suggestions, please add c
 ### Inputs:
 Accepts below inputs as parameters.
 
-- --input_json_schema_path: Provide absolute path of the json schema file. The sample json schema file should look like below.
+- --input_json_schema_path: Provide absolute path of the json schemas. It accepts folder with json schema files or absolute path of a json schema file. The sample json schema file should be in the below format.
+```json
+{
+  "type": "<object/record,etc>",
+  "properties": {
+    "<column_name>": { "type": "<data_type>" },
+    "<column_name>": { "type": "<data_type>" }
+  }
+}
+
+The sample json schema file would look like below.
+
+```
 ```json
 {
   "type": "object",
@@ -26,6 +38,7 @@ Accepts below inputs as parameters.
   }
 }
 ```
+If error occured while processing a schema file, that file would be skipped. Mock data would get generated for rest of the valid schema files.
 
 - --output_file_format: The output file format should be one of the `"CSV","JSON","XML","EXCEL","PARQUET","ORC"`
 

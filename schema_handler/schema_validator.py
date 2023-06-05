@@ -13,7 +13,7 @@ class DataTypeError(Exception):
         return repr(self.value)
 
 
-def validate_and_read_json_as_object(json_schema: str):
+def is_valid_json_schema_file(json_schema: str, file_name: str):
     try:
         json_object = json.loads(json_schema)
         schema_dict = json_object["properties"]
@@ -24,13 +24,15 @@ def validate_and_read_json_as_object(json_schema: str):
                 raise (DataTypeError(data_type))
 
     except ValueError as ex:
-        logging.error(f"Invalid json schema file provided: {ex}")
-        return SyntaxError
+        logging.error(f"Skipping invalid schema file {file_name}")
+        logging.error(f"Invalid json schema file({file_name}) provided: {ex}")
+        return False
 
     except DataTypeError as ex:
+        logging.error(f"Skipping file {file_name}")
         logging.error(
             f"Invalid data type {ex.value} detected in json. Supported data type {DATA_TYPES}"
         )
-        sys.exit(1)
+        return False
 
-    return json_object
+    return True
