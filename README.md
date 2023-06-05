@@ -1,16 +1,17 @@
 # Data Generator - WIP
 
 ## Overview
-During every data project I came across a very basic problem where we have to wait for the test data. For fewer columns it's quite easy to generate the data using online utilities but those has certain limitations on number of columns and rows.
-Solve this, I invested some time to build a utility to generate the mock data based on the supplied json schema.
-This utility is using Python Faker module to randomly generate the test data.
+During every data project I came across a very basic problem where we have to wait for the test data. For fewer columns it's quite easy to generate the data using online utilities but those have certain limitations on the number of columns and rows.
+To solve this, I’ve built a utility to generate the mock data based on the supplied json schema.
+This utility is using the Python Faker module to randomly generate the test data.
 
 ## How to use
-Follow below step to run the utility. I am open to the suggestions, please add comment or mail me your suggestions.
+Follow the below steps to run the utility. I am open to suggestions, please add comments or mail me your suggestions.
+
 ### Inputs:
 Accepts below inputs as parameters.
 
-- --input_json_schema_path: Provide absolute path of the json schemas. It accepts folder with json schema files or absolute path of a json schema file.
+- --input_json_schema_path: Provide absolute path of the json schema. It accepts folders with json schema files or absolute path of a json schema file.
 > Json schema file format.
 ```json
 {
@@ -38,7 +39,7 @@ The sample json schema file would look like below.
   }
 }
 ```
-The generator will skip the given json schema file if error occured. Mock data would get generated for rest of the valid schema files.
+The generator will skip the given json schema file if an error occurred. Mock data would get generated for rest of the valid schema files.
 
 - --output_file_format: The output file format should be one of the `"CSV","JSON","XML","EXCEL","PARQUET","ORC"`
 
