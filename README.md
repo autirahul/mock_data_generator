@@ -3,15 +3,16 @@
 ## Overview
 During every data project I came across a very basic problem where we have to wait for the test data. For fewer columns it's quite easy to generate the data using online utilities but those have certain limitations on the number of columns and rows.
 To solve this, I’ve built a utility to generate the mock data based on the supplied json schema.
-This utility is using the Python Faker module to randomly generate the test data.
+This utility is using Python Faker module to randomly generate the test data.
 
 ## How to use
-Follow the below steps to run the utility. I am open to suggestions, please add comments or mail me your suggestions.
+Follow below steps to run the utility. I am open to your suggestions, please add comments or mail me your suggestions.
 
 ### Inputs:
-Accepts below inputs as parameters.
+#### Supported Input Parameters
 
-- --input_json_schema_path: Provide absolute path of the json schema. It accepts folders with json schema files or absolute path of a json schema file.
+- --input_json_schema_path: Provide absolute path of the json schema file/folder. It accepts folders(that contains valid json schema files) or absolute path of a json schema file.
+
 > Json schema file format.
 ```json
 {
@@ -23,7 +24,7 @@ Accepts below inputs as parameters.
 }
 
 ```
-The sample json schema file would look like below.
+> The sample json schema file would look like below.
 ```json
 {
   "type": "object",
@@ -39,7 +40,7 @@ The sample json schema file would look like below.
   }
 }
 ```
-The generator will skip the given json schema file if an error occurred. Mock data would get generated for rest of the valid schema files.
+The generator will skip the current json schema file if an error occurred. Mock data would get generated for rest of the valid schema files.
 
 - --output_file_format: The output file format should be one of the `"CSV","JSON","XML","EXCEL","PARQUET","ORC"`
 
