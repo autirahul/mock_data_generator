@@ -50,7 +50,7 @@ The generator will skip the current json schema file if an error occurred. Mock 
 - --number_of_rows: Number of output rows to be generated
 
 ### Pre-requisites
-1. Python ^3.10
+1. Python ~3.11.3
 
 
 ### Steps to execute the utility
