@@ -4,6 +4,7 @@ version = "0.1.0"
 description = "Generate mock data using json schema supplied."
 authors = ["Rahul Auti <rahulsmtauti@gmail.com>"]
 license = "MIT"
+readme = "README.md"
 
 [tool.poetry.scripts]
 generate = "mock_data_generator.driver:run"
