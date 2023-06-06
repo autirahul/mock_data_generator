@@ -1,8 +1,7 @@
 import json
 import logging
-import sys
 
-from utils.constants import DATA_TYPES
+from mock_data_generator.utils.constants import DATA_TYPES
 
 
 class DataTypeError(Exception):

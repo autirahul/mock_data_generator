@@ -1,6 +1,6 @@
 import argparse
-from utils.constants import FILE_FORMATS
-from utils.fileutils import proceed
+from mock_data_generator.utils.constants import FILE_FORMATS
+from mock_data_generator.utils.fileutils import proceed
 
 
 def validate_file_format(value):

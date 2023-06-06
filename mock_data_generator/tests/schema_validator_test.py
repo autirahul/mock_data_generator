@@ -1,4 +1,3 @@
-import json
 
 from schema_handler.schema_validator import is_valid_json_schema_file
 

@@ -1,6 +1,6 @@
 import os
-from schema_handler.schema_validator import is_valid_json_schema_file
-from generator.generate import runner
+from mock_data_generator.schema_handler.schema_validator import is_valid_json_schema_file
+from mock_data_generator.generator.generate import runner
 from argparse import Namespace
 import logging
 import json

@@ -2,7 +2,7 @@ from utils.fileutils import read_json_file_as_string, json_str_to_json_object
 
 
 def test_read_valid_json_file_as_string():
-    sample_file_path = "resources/schema.json"
+    sample_file_path = "mock_data_generator/resources/schema.json"
     file_content = read_json_file_as_string(sample_file_path)
     assert type(file_content) == str
 

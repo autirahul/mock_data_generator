@@ -27,7 +27,8 @@ pytest = "^7.3.1"
 
 [tool.pytest.ini_options]
 pythonpath = [
-  "."
+  ".",
+  "./mock_data_generator"
 ]
 
 [build-system]
