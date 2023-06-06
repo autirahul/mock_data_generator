@@ -1,7 +1,7 @@
 # Data Generator - WIP
 
 ## Overview
-During every data project I came across a very basic problem where we have to wait for the test data. For fewer columns it's quite easy to generate the data using online utilities but those have certain limitations on the number of columns and rows.
+During every data project I came across a very basic common problem where we have to wait for the test data. For fewer columns it's quite easy to generate the data using online utilities but those have certain limitations on the number of columns and rows.
 To solve this, I’ve built a utility to generate the mock data based on the supplied json schema.
 This utility is using Python Faker module to randomly generate the test data.
 
@@ -45,12 +45,12 @@ The generator will skip the current json schema file if an error occurred. Mock 
 
 - --output_file_format: The output file format should be one of the `"CSV","JSON","XML","EXCEL","PARQUET","ORC"`
 
-- --output_path: Absolute path to store the generated mock dataset. If an output path does not exists, it will create it and store the data inside the directory into data file.
+- --output_path: Absolute path to store the generated mock dataset. If an output path does not exists, it will create it and store the data inside the directory into data.<output file format> file.
 
 - --number_of_rows: Number of output rows to be generated
 
 ### Pre-requisites
-1. Python ~3.11.3
+1. Python ^3.10
 
 
 ### Steps to execute the utility
