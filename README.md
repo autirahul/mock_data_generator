@@ -9,7 +9,7 @@ This utility is using Python Faker module to randomly generate the test data.
 Follow below steps to run the utility. I am open to your suggestions, please add comments or mail me your suggestions.
 
 ### Inputs
-It accept valid json schema files only with supported data types: `"STRING","INT","INTEGER","NUMBER","FLOAT","DATE","BOOLEAN","BOOL","TIMESTAMP"`
+It accept valid json schema files only with supported data types: `"STRING","INT","INTEGER","NUMBER","FLOAT","DATE","BOOLEAN","BOOL","TIMESTAMP","ADDRESS","CITY","COUNTRY","COUNTRY_CODE","POSTCODE","LICENSE_PLATE","SWIFT","COMPANY","COMPANY_SUFFIX","CREDIT_CARD","CREDIT_CARD_PROVIDER","CREDIT_CARD_NUMBER","CURRENCY","DAY_NUM","DAY_NAME","MONTH_NUM","MONTH_NAME","YEAR","COORDINATE","LATITUDE","LONGITUDE","EMAIL","HOSTNAME","IPV4","IPV6","URI","URL","JOB","TEXT","PASSWORD","SHA1","SHA256","UUID","PASSPORT_NUMBER","NAME","LANGUAGE_NAME","LAST_NAME","FIRST_NAME","PHONE_NUMBER","SSN"`
 #### Supported Input Parameters
 
 - --input_json_schema_path: Provide absolute path of the json schema file/folder. It accepts folders(that contains valid json schema files) or absolute path of a json schema file.
@@ -31,13 +31,13 @@ It accept valid json schema files only with supported data types: `"STRING","INT
   "type": "object",
   "properties": {
     "price": { "type": "number" },
-    "name": { "type": "string" },
-    "a": { "type": "integer" },
-    "b": { "type": "float" },
-    "c": { "type": "boolean" },
+    "name": { "type": "name" },
+    "location": { "type": "COORDINATE" },
+    "flt": { "type": "float" },
+    "email_id": { "type": "EMAIL" },
     "dt": { "type": "date" },
     "ts": { "type": "timestamp" },
-    "e": { "type": "boolean" }
+    "is_valid": { "type": "boolean" }
   }
 }
 ```

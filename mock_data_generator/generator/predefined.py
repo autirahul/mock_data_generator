@@ -1,12 +1,12 @@
+from faker import Faker
+
+
 def generate_string_data(fkr: Faker):
     return fkr.pystr()
 
 
 def generate_integer_data(fkr: Faker):
     return fkr.random_int()
-
-
-from faker import Faker
 
 
 def generate_float_data(fkr: Faker):
