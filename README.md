@@ -4,6 +4,7 @@
 During every data project I came across a very basic common problem where we have to wait for the test data. For fewer columns it's quite easy to generate the data using online utilities but those have certain limitations on the number of columns and rows.
 To solve this, I’ve built a utility to generate the mock data based on the supplied json schema.
 This utility is using Python Faker module to randomly generate the test data.
+Step by step on [medium](https://medium.com/@rahulsmtauti/mock-data-generation-for-data-projects-3999865cb82c).
 
 ## How to use
 Follow below steps to run the utility. I am open to your suggestions, please add comments or mail me your suggestions.
