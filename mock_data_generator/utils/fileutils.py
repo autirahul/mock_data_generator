@@ -1,5 +1,7 @@
 import os
-from mock_data_generator.schema_handler.schema_validator import is_valid_json_schema_file
+from mock_data_generator.schema_handler.schema_validator import (
+    is_valid_json_schema_file,
+)
 from mock_data_generator.generator.generate import runner
 from argparse import Namespace
 import logging
@@ -16,9 +18,7 @@ def make_path_if_not_exists(file_path: str):
         os.makedirs(file_path)
 
 
-def mk_run_call(
-    schema_file_path: str, num_of_rows: str, output_path: str, output_file_format: str
-):
+def mk_run_call(schema_file_path: str, output_path: str, output_file_format: str):
     logging.info(f"Generating data for {schema_file_path}")
     json_schema_string = read_json_file_as_string(schema_file_path)
     if is_valid_json_schema_file(
@@ -27,7 +27,7 @@ def mk_run_call(
         json_schema = json_str_to_json_object(json_schema=json_schema_string)
         runner(
             json_schema=json_schema,
-            num_of_rows=int(num_of_rows),
+            num_of_rows=json_schema["number_of_rows"],
             output_path=output_path,
             file_format=output_file_format,
         )
@@ -43,7 +43,6 @@ def proceed(args: Namespace):
                 file_path = f"{json_schema_path}/{each_file}"
                 mk_run_call(
                     schema_file_path=file_path,
-                    num_of_rows=args.number_of_rows,
                     output_path=out_path,
                     output_file_format=args.output_file_format,
                 )
@@ -51,7 +50,6 @@ def proceed(args: Namespace):
         make_path_if_not_exists(args.output_path)
         mk_run_call(
             schema_file_path=json_schema_path,
-            num_of_rows=args.number_of_rows,
             output_path=args.output_path,
             output_file_format=args.output_file_format,
         )

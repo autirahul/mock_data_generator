@@ -11,16 +11,6 @@ def validate_file_format(value):
     return value
 
 
-def validate_num_rows(value):
-    num_rows = int(value)
-    if num_rows <= 0:
-        raise argparse.ArgumentTypeError(
-            "%s is an invalid number of rows. The value for number of rows should be positive integer"
-            % value
-        )
-    return num_rows
-
-
 def run():
     parser = argparse.ArgumentParser()
     parser.add_argument(
@@ -36,12 +26,6 @@ def run():
     )
     parser.add_argument(
         "--output_path", help="Output path for mock dataset.", required=True
-    )
-    parser.add_argument(
-        "--number_of_rows",
-        type=validate_num_rows,
-        help="Number of mock records to be generated.",
-        required=True,
     )
     args = parser.parse_args()
     proceed(args=args)

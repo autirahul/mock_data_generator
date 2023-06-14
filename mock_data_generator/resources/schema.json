@@ -1,5 +1,6 @@
 {
     "type" : "object",
+    "number_of_rows" : 5,
     "properties" : {
         "price" : {"type" : "string"},
         "name" : {"type" : "int"},
